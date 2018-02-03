@@ -12,6 +12,20 @@
   "license": "ISC",
   "devDependencies": {
     "browserify": "^15.2.0",
-    "budo": "^11.0.1"
+    "browserify-css": "^0.14.0",
+    "budo": "^11.0.1",
+    "vueify": "^9.4.1"
+  },
+  "dependencies": {
+    "axios": "^0.17.1",
+    "vue": "^2.5.13",
+    "vue-material": "^0.8.1",
+    "vue-router": "^3.0.1"
+  },
+  "browserify": {
+    "transform": [
+      "vueify",
+      "browserify-css"
+    ]
   }
 }

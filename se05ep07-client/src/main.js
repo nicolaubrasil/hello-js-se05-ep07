@@ -1,7 +1,14 @@
-const foo = require("./mymodule1")
-const bar = require("./anothermodule").bar
+// main.js
+require("./main.css")
 
-foo(2)
-console.log(bar(3))
+const Vue = require("vue")
+const VueRouter = require("vue-router")
+const VueMaterial = require("vue-material")
 
-alert("hello from browserify")// alert só é válido no browser
+Vue.use(VueRouter)
+Vue.use(VueMaterial)
+
+new Vue({
+  el: "#mountpoint",
+  render: r => r(require("./spa.vue"))
+})
